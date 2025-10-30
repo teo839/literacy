@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <title>フェードアニメーション</title>
+  <style>
+    .fade-image {
+      opacity: 0;
+      transition: opacity 5s ease-in-out;
+    }
+
+    .fade-image.show {
+      opacity: 1;
+    }
+  </style>
+</head>
+<body>
+  <div style="background-color: black;">
+    <img src="ズ.png" alt="フェード画像" class="fade-image" id="image">
+  </div>
+
+  <img src="ズ.png" alt="フェード画像" class="fade-image" id="image">
+
+  <script>
+    // ページ読み込み後にフェードイン
+    window.onload = () => {
+      document.getElementById('image').classList.add('show');
+    };
+  </script>
+</body>
+</html>
